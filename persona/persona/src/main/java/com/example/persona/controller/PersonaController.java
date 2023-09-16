@@ -28,8 +28,8 @@ public List<Persona> getPersona(){
     public void deletePersona(@PathVariable Long id){
     personaService.deletePersona(id);
 }
-@PostMapping ("/update")
-    public Persona updatePersona(@RequestBody Persona persona){
-    return personaService.updatePersona(persona);
-}
+    @PostMapping("/update/{id}")
+    public Persona updatePersona(@RequestBody Persona persona, @PathVariable Long id) {
+        return personaService.updatePersona(persona, id);
+    }
 }
