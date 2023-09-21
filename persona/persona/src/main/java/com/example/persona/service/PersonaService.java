@@ -23,6 +23,7 @@ public class PersonaService {
         return personaRepository.save(persona);
     }
     public Persona updatePersona (Persona persona, Long id){
+       persona.setId(id);
         return personaRepository.save(persona);
         }
         public void deletePersona (Long id){
