@@ -18,7 +18,7 @@ import lombok.NoArgsConstructor;
 public class Persona {
    @Id
    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private Long id;
     private String nombre;
     private String apellido;
     private int edad;
